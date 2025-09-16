@@ -1,0 +1,10 @@
+gazebo:
+  ros__parameters:
+    publish_rate: 400.0
+diff_controller:
+  type: "diff_drive_controller/DiffDriveController"
+  left_wheel: "left_wheel_joint"
+  right_wheel: "right_wheel_joint"
+  wheel_separation: 0.3   # adjust to your robot
+  wheel_radius: 0.05      # adjust to your robot
+  cmd_vel_topic: "/cmd_vel"

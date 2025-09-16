@@ -1,0 +1,67 @@
+<model name='Construction Barrel'>
+  <link name='link'>
+    <inertial>
+      <pose>0 0 0.4 0 0 0</pose>
+      <mass>500</mass>
+      <inertia>
+        <ixx>51.2096</ixx>
+        <iyy>51.2096</iyy>
+        <izz>25</izz>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyz>0</iyz>
+      </inertia>
+    </inertial>
+    <collision name='collision'>
+      <geometry>
+        <cylinder>
+          <radius>0.3</radius>
+          <length>0.8</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <cylinder>
+          <radius>0.3</radius>
+          <length>0.8</length>
+        </cylinder>
+      </geometry>
+    </visual>
+  </link>
+  <pose>-0.756237 1.39226 0 0 0 0</pose>
+</model>
+
+<model name='Construction Cone'>
+  <link name='link'>
+    <inertial>
+      <pose>0 0 0.3 0 0 0</pose>
+      <mass>1</mass>
+      <inertia>
+        <ixx>1</ixx>
+        <iyy>1</iyy>
+        <izz>1</izz>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyz>0</iyz>
+      </inertia>
+    </inertial>
+    <collision name='collision'>
+      <geometry>
+        <cylinder>
+          <radius>0.2</radius>
+          <length>0.5</length>
+        </cylinder>
+      </geometry>
+    </collision>
+    <visual name='visual'>
+      <geometry>
+        <cylinder>
+          <radius>0.2</radius>
+          <length>0.5</length>
+        </cylinder>
+      </geometry>
+    </visual>
+  </link>
+  <pose>-2.19745 -2.25046 0 0 0 0</pose>
+</model>

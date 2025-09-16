@@ -1,0 +1,21 @@
+<launch>
+    <!-- Robot description -->
+    <node pkg="robot_state_publisher" exec="robot_state_publisher" output="screen">
+        <param name="robot_description"
+               value="$(command 'xacro /home/prince/ros2_ws/src/my_robot_description/urdf/my_robot.urdf.xacro')" />
+        <param name="use_sim_time" value="true"/>
+    </node>
+
+    <!-- Launch Gazebo -->
+    <include file="/opt/ros/humble/share/gazebo_ros/launch/gazebo.launch.py">
+        <arg name="world" value="/home/prince/ros2_ws/src/my_robot_bringup/world/my_world.world" />
+    </include>
+
+    <!-- Spawn robot in Gazebo -->
+    <node pkg="gazebo_ros" exec="spawn_entity.py" output="screen"
+          args="-topic robot_description -entity my_robot" />
+
+    <!-- RViz -->
+    <node pkg="rviz2" exec="rviz2" output="screen"
+          args="-d /home/prince/ros2_ws/src/my_robot_bringup/rviz/urdf_config.rviz" />
+</launch>
